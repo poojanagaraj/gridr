@@ -1,0 +1,172 @@
+{
+    "risks": [{
+        "id": "Risk_01",
+        "name": {
+            "name": "Customer Service",
+            "url": "customer-service"
+        },
+        "theme": {
+            "id": "Theme_01",
+            "name": "Advertising and Marketing"
+        },
+        "description": "Risk description",
+        "legalEntity": [ "LE1", "LE2", "LE3" ],
+        "lav": {
+            "name": "Lav name 1",
+            "url": "lav-name-1"
+        },
+        "rating": {
+            "inherent": 51.00,
+            "control": -1.00,
+            "anticipatedResidual": 20.10
+        },
+        "response": {
+            "presumptive": {
+                "value": "MLOV",
+                "delta": "MLOV",
+                "justification": "Justification for changes to presumptive risk response"
+            }
+        },
+        "openIssues": {
+            "value": 2,
+            "url": "open-issues"
+        }
+    }, {
+        "id": "Risk_02",
+        "name": {
+            "name": "Fraud Related",
+            "url": "fraud-related"
+        },
+        "theme": {
+            "id": "Theme_01",
+            "name": "Advertising and Marketing"
+        },
+        "description": "Risk description - Fraud Related",
+        "legalEntity": [ "LE7", "LE11" ],
+        "lav": [{
+            "name": "Lav name 7",
+            "url": "lav-name-7"
+        }, {
+            "name": "Lav name 11",
+            "url": "lav-name-11"
+        }],
+        "rating": {
+            "inherent": 61.00,
+            "control": 20.00,
+            "anticipatedResidual": 22.00
+        },
+        "response": {
+            "presumptive": {
+                "value": "MLOV",
+                "delta": "MLOV",
+                "justification": "Justification for changes to presumptive risk response"
+            }
+        },
+        "openIssues": {
+            "value": 1,
+            "url": "open-issues-fraud-related"
+        }
+    }, {
+        "id": "Risk_03",
+        "name": {
+            "name": "E-Banking Failure",
+            "url": "ebanking-failure"
+        },
+        "theme": {
+            "id": "Theme_01",
+            "name": "Advertising and Marketing"
+        },
+        "description": "Risk description - E-Banking Failure",
+        "legalEntity": [ "LE8", "LE9" ],
+        "lav": [{
+            "name": "Lav name 12",
+            "url": "lav-name11"
+        }, {
+            "name": "Lav name 1",
+            "url": "lav-name1"
+        }, {
+            "name": "Lav name 7",
+            "url": "lav-name7"
+        }],
+        "rating": {
+            "inherent": 51.00,
+            "control": 13.00,
+            "anticipatedResidual": 25.00
+        },
+        "response": {
+            "presumptive": {
+                "value": "MLOV",
+                "delta": "MLOV",
+                "justification": "Justification for changes to presumptive risk response"
+            }
+        },
+        "openIssues": {}
+    }, {
+        "id": "Risk_04",
+        "name": {
+            "name": "E-Banking Failure",
+            "url": "ebanking-failure"
+        },
+        "theme": {
+            "id": "Theme_02",
+            "name": "Affliate Transactions"
+        },
+        "description": "Risk description - E-Banking Failure",
+        "legalEntity": [ "LE1", "LE2", "LE3" ],
+        "lav": [{
+            "name": "Lav name 11",
+            "url": "lav-name11"
+        }, {
+            "name": "Lav 8",
+            "url": "lav-8"
+        }],
+        "rating": {
+            "inherent": 62.00,
+            "control": 30.00,
+            "anticipatedResidual": 45.00
+        },
+        "response": {
+            "presumptive": {
+                "value": "MLOV",
+                "delta": "MLOV",
+                "justification": "Justification for changes to presumptive risk response"
+            }
+        },
+        "openIssues": {}
+    },  {
+        "id": "Risk_05",
+        "name": {
+            "name": "Power outage",
+            "url": "power-outage"
+        },
+        "theme": {
+            "id": "Theme_02",
+            "name": "Affliate Transactions"
+        },
+        "description": "Risk description - Power outage",
+        "legalEntity": [ "LE1", "LE5" ],
+        "lav": [{
+            "name": "Lav name 4",
+            "url": "lav-name4"
+        }, {
+            "name": "Lav 2",
+            "url": "lav-2"
+        }],
+        "rating": {
+            "inherent": 64.00,
+            "control": -1.00,
+            "anticipatedResidual": 46.00
+        },
+        "response": {
+            "presumptive": {
+                "value": "MLOV",
+                "delta": "MLOV",
+                "justification": "Justification for changes to presumptive risk response"
+            }
+        },
+        "openIssues": {
+            "value": 1,
+            "url": "open-issues"
+        }
+    }]
+}
