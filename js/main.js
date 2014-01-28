@@ -8,6 +8,24 @@ Ext.onReady(function() {
     storeId: "riskStore",
     root: "risks",
     idProperty: "id",
-    fields: ["id", ", "url", {name:"size", type: "float"}, {name:"lastmod", type:"date"}]
-});
+    fields: [
+      "id",
+      "name",
+      "url",
+      "description",
+      "themeId",
+      "themeName",
+      "legalEntity",
+      "lavUrl",
+      { "name": "ratingInherent", "type": "float" },
+      { "name": "ratingControl", "type": "float" },
+      { "name": "ratingAnticipatedResidual", "type": "float" },
+      "responsePresumptiveValue",
+      "responsePresumptiveDelta",
+      "responsePresumptiveJustification",
+      "openIssues",
+      "openIssuesUrl"
+    ]
+  });
+
 });
