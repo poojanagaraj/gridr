@@ -1,0 +1,28 @@
+{
+  "metaData": {
+    "totalProperty": "results",
+    "root": "risks",
+    "id": "id",
+    "fields": [
+      { "name": "name" },
+      { "name": "url" },
+      { "name": "description" },
+      { "name": "themeId" },
+      { "name": "themeName" },
+      { "name": "legalEntity" },
+      { "name": "lavName" },
+      { "name": "lavUrl" },
+      { "name": "ratingInherent" },
+      { "name": "ratingControl" },
+      { "name": "ratingAnticipatedResidual" },
+      { "name": "responsePresumptiveValue" },
+      { "name": "responsePresumptiveDelta" },
+      { "name": "responsePresumptiveJustification" },
+      { "name": "openIssues" },
+      { "name": "openIssuesUrl" }
+    ]
+  },
+  
+  "results": 5,
+
+}
