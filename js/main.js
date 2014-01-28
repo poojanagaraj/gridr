@@ -28,4 +28,12 @@ Ext.onReady(function() {
     ]
   });
 
+
+  // Create JSONReader
+
+  // Give JSONReader object to GroupingStore
+
+  // GroupingStore to GroupingView
+
+  // Use GroupingView inside GridPanel
 });
