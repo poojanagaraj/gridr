@@ -36,33 +36,6 @@ Ext.onReady(function() {
     groupField: "themeId"
   });
 
-  var store = new Ext.data.JsonStore({
-    url: "data/risks.json",
-    storeId: "riskStore",
-    root: "risks",
-    idProperty: "id",
-    fields: [
-      "id",
-      "name",
-      "url",
-      "description",
-      "themeId",
-      "themeName",
-      "legalEntity",
-      "lavUrl",
-      { "name": "ratingInherent", "type": "float" },
-      { "name": "ratingControl", "type": "float" },
-      { "name": "ratingAnticipatedResidual", "type": "float" },
-      "responsePresumptiveValue",
-      "responsePresumptiveDelta",
-      "responsePresumptiveJustification",
-      "openIssues",
-      "openIssuesUrl"
-    ]
-  });
-  console.log("Created store", store);
-
-
   // Create JSONReader
 
   // Give JSONReader object to GroupingStore
