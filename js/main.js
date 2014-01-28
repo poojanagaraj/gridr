@@ -1,8 +1,41 @@
 Ext.onReady(function() {
   // Ext.Msg.alert("Welcome!", "Welcome!");
   
-  // 1. Create JSON data at data/risks.json
-  // 2. Create a store from data/risks.json
+  var RiskRecord = Ext.data.Record.create([
+    { "name": "name" },
+    { "name": "url" },
+    { "name": "description" },
+    { "name": "themeId" },
+    { "name": "themeName" },
+    { "name": "legalEntity" },
+    { "name": "lavName" },
+    { "name": "lavUrl" },
+    { "name": "ratingInherent" },
+    { "name": "ratingControl" },
+    { "name": "ratingAnticipatedResidual" },
+    { "name": "responsePresumptiveValue" },
+    { "name": "responsePresumptiveDelta" },
+    { "name": "responsePresumptiveJustification" },
+    { "name": "openIssues" },
+    { "name": "openIssuesUrl" }
+  ]);
+
+  var riskReader = new Ext.data.JsonReader({
+    totalProperty: "results",
+    root: "risks",
+    id: "id"
+  }, RiskRecord);
+
+  var riskGroupingStore = new Ext.data.GroupingStore({
+    reader: riskReader,
+    url: "data/risks.json",
+    sortInfo: {
+      field: "name",
+      direction: "ASC"
+    },
+    groupField: "themeId"
+  });
+
   var store = new Ext.data.JsonStore({
     url: "data/risks.json",
     storeId: "riskStore",
@@ -27,6 +60,7 @@ Ext.onReady(function() {
       "openIssuesUrl"
     ]
   });
+  console.log("Created store", store);
 
 
   // Create JSONReader
