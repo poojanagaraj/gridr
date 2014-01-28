@@ -20,11 +20,15 @@ Ext.onReady(function() {
     { "name": "openIssuesUrl" }
   ]);
 
+  console.log("RiskRecord", RiskRecord);
+
   var riskReader = new Ext.data.JsonReader({
     totalProperty: "results",
     root: "risks",
     id: "id"
   }, RiskRecord);
+
+  console.log("riskReader", riskReader);
 
   var riskGroupingStore = new Ext.data.GroupingStore({
     reader: riskReader,
@@ -36,11 +40,32 @@ Ext.onReady(function() {
     groupField: "themeId"
   });
 
-  // Create JSONReader
+  console.log("riskGroupingStore", riskGroupingStore);
 
-  // Give JSONReader object to GroupingStore
+  var riskGroupingView = new Ext.grid.GroupingView({
+    forceFit: true
+  });
 
-  // GroupingStore to GroupingView
+  console.log("riskGroupingView", riskGroupingView);
 
-  // Use GroupingView inside GridPanel
+  var riskGrid = new Ext.grid.GridPanel({
+    store: riskGroupingStore,
+    columns: [
+      { id: "id", header: "Risk ID", dataIndex: "id" },
+      { header: "Risk Name", dataIndex: "name" },
+      { header: "Risk Name", dataIndex: "description" },
+      { header: "Open Issues", dataIndex: "openIssues" }
+    ],
+    view: riskGroupingView,
+    frame:true,
+    width: "auto",
+    height: "auto",
+    collapsible: true,
+    animCollapse: true,
+    title: "Risk Grid",
+    iconCls: "icon-grid",
+    renderTo: "gridr"
+  });
+
+  console.log("riskGrid", riskGrid);
 });
