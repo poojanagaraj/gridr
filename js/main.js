@@ -33,11 +33,12 @@ Ext.onReady(function() {
   var riskGroupingStore = new Ext.data.GroupingStore({
     reader: riskReader,
     url: "data/risks.json",
+    autoLoad: true,
     sortInfo: {
       field: "name",
       direction: "ASC"
     },
-    groupField: "themeId"
+    groupField: "themeName"
   });
 
   console.log("riskGroupingStore", riskGroupingStore);
@@ -51,15 +52,17 @@ Ext.onReady(function() {
   var riskGrid = new Ext.grid.GridPanel({
     store: riskGroupingStore,
     columns: [
-      { id: "id", header: "Risk ID", dataIndex: "id" },
-      { header: "Risk Name", dataIndex: "name" },
-      { header: "Risk Name", dataIndex: "description" },
+      { header: "Risk ID", dataIndex: "id" },
+      { header: "Name", dataIndex: "name" },
+      { header: "Description", dataIndex: "description" },
+      { header: "Theme Name", dataIndex: "themeName" },
       { header: "Open Issues", dataIndex: "openIssues" }
     ],
     view: riskGroupingView,
     frame:true,
     width: "auto",
     height: "auto",
+    autoHeight: true,
     collapsible: true,
     animCollapse: true,
     title: "Risk Grid",
